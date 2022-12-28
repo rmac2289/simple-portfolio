@@ -1,0 +1,46 @@
+[
+  {
+    "title": "Technical",
+    "values": [
+      "JavaScript",
+      "Python",
+      "Django",
+      "React",
+      "Node.js",
+      "SQL",
+      "NoSQL",
+      "Postgres",
+      "MySQL",
+      "DataDog",
+      "Sentry",
+      "SnowFlake",
+      "mParticle"
+    ]
+  },
+  {
+    "title": "Project Management & DevOps",
+    "values": [
+      "Jira",
+      "Confluence",
+      "AWS",
+      "Azure",
+      "Jenkins",
+      "GitHub Actions",
+      "Slack"
+    ]
+  },
+  {
+    "title": "Test Management",
+    "values": [
+      "TestRail",
+      "Zebrunner",
+      "BrowserStack",
+      "Automated Testing",
+      "Manual Testing"
+    ]
+  },
+  {
+    "title": "Soft",
+    "values": ["Communication", "Leadership", "Teamwork"]
+  }
+]
