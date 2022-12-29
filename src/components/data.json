@@ -7,6 +7,8 @@
       "Django",
       "React",
       "Node.js",
+      "HTML",
+      "CSS",
       "SQL",
       "NoSQL",
       "Postgres",
@@ -15,6 +17,19 @@
       "Sentry",
       "SnowFlake",
       "mParticle"
+    ]
+  },
+  {
+    "title": "Testing & QA",
+    "values": [
+      "TestRail",
+      "Zebrunner",
+      "BrowserStack",
+      "Cypress",
+      "Postman",
+      "API Testing",
+      "Automation",
+      "E2E"
     ]
   },
   {
@@ -29,16 +44,7 @@
       "Slack"
     ]
   },
-  {
-    "title": "Test Management",
-    "values": [
-      "TestRail",
-      "Zebrunner",
-      "BrowserStack",
-      "Automated Testing",
-      "Manual Testing"
-    ]
-  },
+
   {
     "title": "Soft",
     "values": ["Communication", "Leadership", "Teamwork"]

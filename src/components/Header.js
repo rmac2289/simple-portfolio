@@ -2,6 +2,8 @@ import { Flex, Box, Text, Heading } from "@chakra-ui/react";
 import React from "react";
 import Bio from "./Bio";
 import Body from "./Body";
+import Contact from "./Contact";
+import Projects from "./Projects";
 
 const Header = () => {
   return (
@@ -19,6 +21,8 @@ const Header = () => {
       </Box>
       <Bio />
       <Body />
+      <Projects />
+      <Contact />
     </Box>
   );
 };
