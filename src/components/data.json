@@ -2,51 +2,60 @@
   {
     "title": "Technical",
     "values": [
+      "Languages",
       "JavaScript",
       "Python",
-      "Django",
-      "React",
-      "Node.js",
       "HTML",
       "CSS",
+      "Data",
       "SQL",
       "NoSQL",
       "Postgres",
       "MySQL",
+      "SnowFlake",
+      "mParticle",
+      "Frameworks",
+      "Django",
+      "React",
+      "Node.js",
+      "Logging",
       "DataDog",
       "Sentry",
-      "SnowFlake",
-      "mParticle"
+      "DevOps",
+      "AWS",
+      "Azure",
+      "Jenkins",
+      "GitHub Actions"
     ]
   },
   {
     "title": "Testing & QA",
     "values": [
+      "Test Management",
       "TestRail",
       "Zebrunner",
       "BrowserStack",
+      "Automation",
       "Cypress",
       "Postman",
+      "General",
+      "Testflight",
+      "Mobile Testing",
       "API Testing",
-      "Automation",
       "E2E"
     ]
   },
   {
-    "title": "Project Management & DevOps",
+    "title": "Misc",
     "values": [
+      "Project Management",
       "Jira",
       "Confluence",
-      "AWS",
-      "Azure",
-      "Jenkins",
-      "GitHub Actions",
-      "Slack"
+      "Slack",
+      "Soft Skills",
+      "Communication",
+      "Leadership",
+      "Teamwork"
     ]
-  },
-
-  {
-    "title": "Soft",
-    "values": ["Communication", "Leadership", "Teamwork"]
   }
 ]

@@ -1,22 +1,11 @@
-import {
-  Flex,
-  Box,
-  Text,
-  Heading,
-  Tag,
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionIcon,
-  AccordionPanel,
-} from "@chakra-ui/react";
+import { Flex, Box, Text, Heading, Tag } from "@chakra-ui/react";
 import data from "./data.json";
-
-const Body = () => {
+import { isSubcategory } from "../util/helpers";
+const Skills = () => {
   return (
     <Box mb={5} maxWidth="700px" border="1px solid black">
       <Flex margin={10} flexDirection="column" justifyContent="flex-start">
-        <Heading mb={1} as="h2" size="3xl" color="gray.800">
+        <Heading mb={1} as="h2" size="2xl" color="gray.800">
           Skills
         </Heading>
         {data.map((category) => {
@@ -33,10 +22,17 @@ const Body = () => {
                 </Text>
               </Box>
               <Text>
-                {category.values.map((item) => {
+                {category.values.map((item, idx) => {
+                  let isSubheader = isSubcategory(item);
                   return (
                     <>
-                      <Tag mb={1} bg="gray.800" color="white">
+                      {isSubheader && idx !== 0 && <br />}
+                      <Tag
+                        mb={1}
+                        bg={isSubheader ? "gray.800" : "white"}
+                        color={isSubheader ? "white" : "gray.800"}
+                        border={isSubheader ? "none" : "1px solid black"}
+                      >
                         {item}
                       </Tag>{" "}
                     </>
@@ -51,4 +47,4 @@ const Body = () => {
   );
 };
 
-export default Body;
+export default Skills;

@@ -4,7 +4,7 @@ import { AiOutlineProfile, AiOutlineLinkedin } from "react-icons/ai";
 import { CiMail } from "react-icons/ci";
 const Contact = () => {
   return (
-    <Flex flexDirection="column" justifyContent="flex-start">
+    <Flex mb={5} flexDirection="column" justifyContent="flex-start">
       <Box>
         <Flex justifyContent="space-between" alignItems="center" width="100px">
           <Tooltip label="LinkedIn" bg="rgb(10, 102, 194)">

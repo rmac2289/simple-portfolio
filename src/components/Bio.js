@@ -3,11 +3,11 @@ const Bio = () => {
   return (
     <Box mb={5} maxWidth="700px" border="1px solid black">
       <Flex margin={10} flexDirection="column" justifyContent="flex-start">
-        <Heading as="h2" size="3xl" color="gray.800">
+        <Heading as="h2" size="2xl" color="gray.800">
           Bio
         </Heading>
         <Box>
-          <Text fontSize="3xl" color="gray.700">
+          <Text fontSize="2xl" color="gray.700">
             About Me
           </Text>
           <Text>
