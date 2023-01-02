@@ -6,12 +6,12 @@ import {
   Button,
   useDisclosure,
 } from "@chakra-ui/react";
-import ProjectDrawer from "./ProjectModal";
+import ProjectModal from "./ProjectModal";
 import { GoBrowser } from "react-icons/go";
 import { HiOutlineDevicePhoneMobile } from "react-icons/hi2";
 import { useState } from "react";
 
-const Projects = () => {
+const Projects = ({ isSmallScreen }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [modalName, setModalName] = useState("");
 
@@ -25,7 +25,12 @@ const Projects = () => {
     console.log(name);
   };
   return (
-    <Box mb={5} maxWidth="700px" border="1px solid black">
+    <Box
+      mb={5}
+      maxWidth="700px"
+      border="1px solid black"
+      bg="rgba(255,255,255,.5)"
+    >
       <Flex margin={10} flexDirection="column" justifyContent="flex-start">
         <Heading mb={2} as="h2" size="2xl" color="gray.800">
           Coding for fun
@@ -45,7 +50,7 @@ const Projects = () => {
           color="gray.800"
           border="1px solid black"
           mb={2}
-          w="50%"
+          w={isSmallScreen ? "75%" : "50%"}
           justifyContent="space-between"
           onClick={() => handleClick("Parkfinder")}
         >
@@ -57,7 +62,7 @@ const Projects = () => {
           color="gray.800"
           border="1px solid black"
           mb={2}
-          w="50%"
+          w={isSmallScreen ? "75%" : "50%"}
           justifyContent="space-between"
           onClick={() => handleClick("Overtime Tracker")}
         >
@@ -68,16 +73,17 @@ const Projects = () => {
           bg="white"
           color="gray.800"
           border="1px solid black"
-          w="50%"
+          w={isSmallScreen ? "75%" : "50%"}
           justifyContent="space-between"
           onClick={() => handleClick("Safety Blanket")}
         >
           <Text>Safety Blanket</Text>
           <HiOutlineDevicePhoneMobile size={24} />
-          <ProjectDrawer
+          <ProjectModal
             isOpen={isOpen}
             onClose={onClose}
             modalName={modalName}
+            isSmallScreen={isSmallScreen}
           />
         </Button>
       </Flex>

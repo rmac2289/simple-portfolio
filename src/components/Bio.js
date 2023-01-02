@@ -1,7 +1,12 @@
 import { Flex, Box, Text, Heading } from "@chakra-ui/react";
 const Bio = () => {
   return (
-    <Box mb={5} maxWidth="700px" border="1px solid black">
+    <Box
+      mb={5}
+      maxWidth="700px"
+      border="1px solid black"
+      bg="rgba(255,255,255,.5)"
+    >
       <Flex margin={10} flexDirection="column" justifyContent="flex-start">
         <Heading as="h2" size="2xl" color="gray.800">
           Bio

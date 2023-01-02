@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Overtime Tracker",
+    "description": "Before breaking into the tech world I worked as a 9-1-1 Dispatcher. Due to the horrendous amount of overtime, I grew weary of wading through all my calendar's events to see when I was working. Identifying problems in my life and creating my own automated solutions has been the most rewarding part of software development thus far.",
+    "tech": ["React Native", "TypeScript", "CSS", "Expo", "Apple Calendar API"]
+  },
+  {
+    "name": "Parkfinder",
+    "description": "A full-stack application for Californians looking to head outdoors. The app allows a user to find parks in their area via several different search methods. I built this because of what I saw as a shortage of aggregated data on parks run by different agencies (state, national, county, etc.). Through further data aggregation, the app will soon be available for other states.",
+    "tech": [
+      "React",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Node.js",
+      "PostgreSQL",
+      "Express",
+      "Heroku",
+      "Netlify"
+    ]
+  },
+  {
+    "name": "Safety Blanket",
+    "description": "Safety Blanket is a full stack mobile app that provides users with emergency and non-emergency public safety help at their fingertips. A user's geolocation is used to find agencies closest to them. The landing screen give the user the option to call an agency, open up the location in google maps, or to save the contact information in their phone.",
+    "tech": [
+      "React Native",
+      "JavaScript",
+      "GraphQL",
+      "Apollo Client",
+      "MongoDB",
+      "Node.js",
+      "Expo"
+    ]
+  }
+]

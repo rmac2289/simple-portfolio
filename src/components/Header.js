@@ -5,23 +5,32 @@ import Skills from "./Skills";
 import Contact from "./Contact";
 import Projects from "./Projects";
 
-const Header = () => {
+const Header = ({ isSmallScreen }) => {
   return (
     <Box width="100%" height="100vh">
-      <Box marginBottom={5} maxWidth="700px" border="1px solid black">
+      <Box
+        marginBottom={5}
+        maxWidth="700px"
+        border="1px solid black"
+        bg="rgba(255,255,255,.5)"
+      >
         <Flex margin={10} flexDirection="column" justifyContent="flex-start">
-          <Heading as="h1" size="4xl" color="gray.800">
+          <Heading
+            as="h1"
+            size={isSmallScreen ? "2xl" : "4xl"}
+            color="gray.800"
+          >
             Ross MacDonald
           </Heading>
 
-          <Text fontSize="4xl" color="gray.700">
+          <Text fontSize={isSmallScreen ? "xl" : "4xl"} color="gray.700">
             Software Engineer
           </Text>
         </Flex>
       </Box>
       <Bio />
-      <Skills />
-      <Projects />
+      <Skills isSmallScreen={isSmallScreen} />
+      <Projects isSmallScreen={isSmallScreen} />
       <Contact />
       <br />
     </Box>

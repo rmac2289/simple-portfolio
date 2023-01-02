@@ -7,22 +7,28 @@ import {
   ModalBody,
   Image,
   ModalFooter,
-  Wrap,
-  WrapItem,
-  useMediaQuery,
-  Divider,
+  Box,
+  Flex,
+  Text,
+  Code,
+  Heading,
 } from "@chakra-ui/react";
+import projectData from "./projectData.json";
+//images
 import OThome from "../assets/OThome.png";
 import OTnew from "../assets/OTnew.png";
 import OTadded from "../assets/OTadded.png";
 import safetyAddContact from "../assets/safetyAddContact.png";
 import safetyDeptList from "../assets/safetyDeptList.png";
-
 import safetyhome from "../assets/safetyhome.png";
 import fyphome from "../assets/fyphome.jpg";
 
-const ProjectDrawer = ({ isOpen, onClose, modalName }) => {
-  const [isMobile] = useMediaQuery("(max-width: 690px)");
+const ProjectDrawer = ({ isOpen, onClose, modalName, isSmallScreen }) => {
+  let currentProject = projectData.filter((project) => {
+    return project.name === modalName;
+  })[0];
+  let currentProjectTechLength = currentProject.tech.length;
+  console.log(currentProject);
   let imageSources = [];
   imageSources =
     modalName === "Overtime Tracker"
@@ -30,23 +36,37 @@ const ProjectDrawer = ({ isOpen, onClose, modalName }) => {
       : modalName === "Parkfinder"
       ? [fyphome]
       : [safetyhome, safetyDeptList, safetyAddContact];
-  console.log(isMobile);
   return (
     <>
-      <Modal onClose={onClose} isOpen={isOpen} isCentered size="3xl">
-        <ModalOverlay />
-        <ModalContent bg="white">
+      <Modal
+        onClose={onClose}
+        isOpen={isOpen}
+        isCentered
+        size={isSmallScreen ? "sm" : "3xl"}
+      >
+        <ModalOverlay bg="rgba(255,255,255,0.75)" />
+        <ModalContent bg="white" borderRadius={0} border="1px solid black">
           <ModalCloseButton color="black" />
           <ModalHeader fontSize="2xl" color="black">
-            {modalName}
+            <Heading>{modalName}</Heading>
+            {currentProject.tech.map((item, idx) => {
+              let isLastItem = currentProjectTechLength < idx - 1;
+              return (
+                <Code fontSize="lg">
+                  {item}
+                  {isLastItem ? "" : ", "}
+                </Code>
+              );
+            })}
           </ModalHeader>
+
           <ModalBody>
-            <Wrap>
+            <Flex>
               {imageSources.map((image, idx) => {
                 return (
-                  <WrapItem
+                  <Box
                     key={idx}
-                    display={isMobile && idx > 0 ? "none" : "initial"}
+                    display={isSmallScreen && idx > 0 ? "none" : "initial"}
                   >
                     <Image
                       src={image}
@@ -54,21 +74,13 @@ const ProjectDrawer = ({ isOpen, onClose, modalName }) => {
                       borderRadius={5}
                       m={1}
                     />
-                  </WrapItem>
+                  </Box>
                 );
               })}
-            </Wrap>
+            </Flex>
           </ModalBody>
           <ModalFooter>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Consequat nisl vel pretium lectus quam id. Semper quis lectus
-              nulla at volutpat diam ut venenatis. Dolor morbi non arcu risus
-              quis varius quam quisque. Massa ultricies mi quis hendrerit dolor
-              magna eget est lorem. Erat imperdiet sed euismod nisi porta.
-              Lectus vestibulum mattis ullamcorper velit.
-            </p>
+            <p>{currentProject.description}</p>
           </ModalFooter>
         </ModalContent>
       </Modal>
