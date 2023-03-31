@@ -7,7 +7,8 @@ export const isSubcategory = (item) => {
     "General",
     "Automation",
     "Test Management",
-    "DevOps",
+    "Ops",
+    "Monitoring",
     "Project Management",
     "Soft Skills",
   ];

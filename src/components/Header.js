@@ -31,8 +31,6 @@ const Header = ({ isSmallScreen }) => {
       <Bio />
       <Skills isSmallScreen={isSmallScreen} />
       <Projects isSmallScreen={isSmallScreen} />
-      <Contact />
-      <br />
     </Box>
   );
 };

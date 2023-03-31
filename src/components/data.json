@@ -13,19 +13,19 @@
       "Postgres",
       "MySQL",
       "SnowFlake",
-      "mParticle",
       "Frameworks",
       "Django",
       "React",
       "Node.js",
-      "Logging",
-      "DataDog",
-      "Sentry",
-      "DevOps",
+      "Ops",
       "AWS",
       "Azure",
       "Jenkins",
-      "GitHub Actions"
+      "GitHub Actions",
+      "Monitoring",
+      "DataDog",
+      "Sentry",
+      "Cloudwatch"
     ]
   },
   {
@@ -33,7 +33,6 @@
     "values": [
       "Test Management",
       "TestRail",
-      "Zebrunner",
       "BrowserStack",
       "Automation",
       "Cypress",

@@ -1,6 +1,7 @@
 import { Flex, Box, Text, Heading, Tag } from "@chakra-ui/react";
 import data from "./data.json";
 import { isSubcategory } from "../util/helpers";
+import React from "react";
 const Skills = () => {
   return (
     <Box
@@ -15,7 +16,7 @@ const Skills = () => {
         </Heading>
         {data.map((category) => {
           return (
-            <Box mb={1}>
+            <Box mb={1} key={category.title}>
               <Box
                 display="flex"
                 flexDir="row"
@@ -30,7 +31,7 @@ const Skills = () => {
                 {category.values.map((item, idx) => {
                   let isSubheader = isSubcategory(item);
                   return (
-                    <>
+                    <React.Fragment key={idx}>
                       {isSubheader && idx !== 0 && <br />}
                       <Tag
                         mb={1}
@@ -40,7 +41,7 @@ const Skills = () => {
                       >
                         {item}
                       </Tag>{" "}
-                    </>
+                    </React.Fragment>
                   );
                 })}
               </Text>

@@ -22,7 +22,6 @@ const Projects = ({ isSmallScreen }) => {
   const handleClick = (name) => {
     onButtonClick(name);
     onOpen();
-    console.log(name);
   };
   return (
     <Box
@@ -33,7 +32,7 @@ const Projects = ({ isSmallScreen }) => {
     >
       <Flex margin={10} flexDirection="column" justifyContent="flex-start">
         <Heading mb={2} as="h2" size="2xl" color="gray.800">
-          Coding for fun
+          Side projects
         </Heading>
         <Box mb={2}>
           <Text>
@@ -79,12 +78,14 @@ const Projects = ({ isSmallScreen }) => {
         >
           <Text>Safety Blanket</Text>
           <HiOutlineDevicePhoneMobile size={24} />
-          <ProjectModal
-            isOpen={isOpen}
-            onClose={onClose}
-            modalName={modalName}
-            isSmallScreen={isSmallScreen}
-          />
+          {isOpen && (
+            <ProjectModal
+              isOpen={isOpen}
+              onClose={onClose}
+              modalName={modalName}
+              isSmallScreen={isSmallScreen}
+            />
+          )}
         </Button>
       </Flex>
     </Box>

@@ -9,10 +9,12 @@ import {
   ModalFooter,
   Box,
   Flex,
-  Text,
   Code,
   Heading,
+  Text,
+  Tag,
 } from "@chakra-ui/react";
+import { removeComma } from "../util/helpers";
 import projectData from "./projectData.json";
 //images
 import OThome from "../assets/OThome.png";
@@ -27,8 +29,6 @@ const ProjectDrawer = ({ isOpen, onClose, modalName, isSmallScreen }) => {
   let currentProject = projectData.filter((project) => {
     return project.name === modalName;
   })[0];
-  let currentProjectTechLength = currentProject.tech.length;
-  console.log(currentProject);
   let imageSources = [];
   imageSources =
     modalName === "Overtime Tracker"
@@ -47,20 +47,29 @@ const ProjectDrawer = ({ isOpen, onClose, modalName, isSmallScreen }) => {
         <ModalOverlay bg="rgba(255,255,255,0.75)" />
         <ModalContent bg="white" borderRadius={0} border="1px solid black">
           <ModalCloseButton color="black" />
-          <ModalHeader fontSize="2xl" color="black">
+          <ModalHeader pb={0} fontSize="2xl" color="black">
             <Heading>{modalName}</Heading>
-            {currentProject.tech.map((item, idx) => {
-              let isLastItem = currentProjectTechLength < idx - 1;
-              return (
-                <Code fontSize="lg">
-                  {item}
-                  {isLastItem ? "" : ", "}
-                </Code>
-              );
-            })}
           </ModalHeader>
 
           <ModalBody>
+            <Box mb={2}>
+              <Tag mr={1} mb={1} bg="gray.800" color="white">
+                Tech stack
+              </Tag>
+              {currentProject.tech.map((item, idx) => {
+                return (
+                  <Tag
+                    bg="white"
+                    border="1px solid black"
+                    color="gray.800"
+                    mr={1}
+                    mb={1}
+                  >
+                    {item}
+                  </Tag>
+                );
+              })}
+            </Box>
             <Flex>
               {imageSources.map((image, idx) => {
                 return (
@@ -70,9 +79,9 @@ const ProjectDrawer = ({ isOpen, onClose, modalName, isSmallScreen }) => {
                   >
                     <Image
                       src={image}
-                      w={modalName === "Parkfinder" ? "300px" : "200px"}
+                      w={modalName === "Parkfinder" ? "275px" : "175px"}
                       borderRadius={5}
-                      m={1}
+                      mr={1}
                     />
                   </Box>
                 );
