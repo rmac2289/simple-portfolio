@@ -37,10 +37,10 @@ const Projects = ({ isSmallScreen }) => {
         <Box mb={2}>
           <Text>
             Throughout the past few years I've worked on a bunch of fun little
-            side projects, mainly in order to solve little problems I've
-            encountered in my life. Overtime tracker is a personal favorite that
-            I used almost daily in my career as a 911 dispatcher. My schedule
-            was so hectic that it needed its own app.
+            side projects, mainly in order to solve problems I've encountered in
+            my life. Overtime tracker is a personal favorite that I used almost
+            daily in my career as a 911 dispatcher. My schedule was so hectic
+            that it needed its own app.
           </Text>
         </Box>
 
@@ -54,7 +54,11 @@ const Projects = ({ isSmallScreen }) => {
           onClick={() => handleClick("Parkfinder")}
         >
           <Text>Parkfinder</Text>
-          <GoBrowser size={24} />
+          <Box display="flex">
+            <HiOutlineDevicePhoneMobile size={24} />
+
+            <GoBrowser size={24} />
+          </Box>
         </Button>
         <Button
           bg="white"
