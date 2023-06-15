@@ -38,6 +38,7 @@ const Skills = () => {
                         bg={isSubheader ? "gray.800" : "white"}
                         color={isSubheader ? "white" : "gray.800"}
                         border={isSubheader ? "none" : "1px solid black"}
+                        fontWeight={isSubheader ? "bold" : "normal"}
                       >
                         {item}
                       </Tag>{" "}
