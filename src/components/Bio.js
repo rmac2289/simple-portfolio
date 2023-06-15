@@ -31,11 +31,11 @@ const Bio = () => {
             application, benefiting our network of ~20,000 restaurants. I led
             the testing efforts for crucial implementations, including a
             partnership with Uber as a delivery provider and the introduction of
-            a multi-provider delivery dispatch system. Currently, I'm leading
-            the testing effort for the implementation of phone-based
-            authentication for diner login. Through my expertise, we were able
-            to maximize delivery revenue by selecting the most cost-efficient
-            delivery partner for each order. I also provide valuable support to
+            a multi-provider delivery dispatch system. Through my expertise, we
+            were able to maximize delivery revenue by selecting the most
+            cost-efficient delivery partner for each order. Currently, I'm
+            leading the testing effort for the implementation of phone-based
+            authentication for diner login. I also provide valuable support to
             cross-functional team members and contribute to minor development
             work, making significant contributions to production releases.
             {showMoreBio && (
@@ -65,12 +65,13 @@ const Bio = () => {
             )}
             <br />
             <Button
-              colorScheme="blue"
+              colorScheme="black"
+              fontWeight="bold"
               variant="link"
               size="sm"
               onClick={toggleMoreBio}
             >
-              Read {showMoreBio ? "less ⬆️" : "more ⬇️"}
+              Read {showMoreBio ? "less ▲" : "more ▼"}
             </Button>
           </Text>
         </Box>
