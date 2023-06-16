@@ -9,6 +9,7 @@ const Contact = () => {
         <Flex justifyContent="space-between" alignItems="center" width="100px">
           <Tooltip label="LinkedIn" bg="rgb(10, 102, 194)">
             <Link
+              role="link"
               _hover={{ color: "rgb(10, 102, 194)" }}
               href="https://www.linkedin.com/in/rsmacdonald/"
               isExternal
@@ -18,6 +19,7 @@ const Contact = () => {
           </Tooltip>
           <Tooltip label="Github" bg="#c9510c">
             <Link
+              role="link"
               _hover={{ color: "#c9510c" }}
               href="https://www.github.com/rmac2289"
               isExternal
@@ -26,7 +28,7 @@ const Contact = () => {
             </Link>
           </Tooltip>
           <Tooltip label="Resumé" bg="purple">
-            <Link _hover={{ color: "purple" }} href="#">
+            <Link role="link" _hover={{ color: "purple" }} href="#">
               <AiOutlineProfile size={30} />
             </Link>
           </Tooltip>

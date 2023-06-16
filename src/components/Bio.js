@@ -41,7 +41,7 @@ const Bio = () => {
             work, making significant contributions to production releases.
             <AnimatePresence>
               {showMoreBio && (
-                <motion.div
+                <motion.span
                   key="text"
                   initial={{ height: 0 }}
                   animate={{ height: "auto" }}
@@ -66,7 +66,7 @@ const Bio = () => {
                   the County of Marin. This experience honed my ability to
                   manage high-pressure situations, work collaboratively in a
                   team environment, and maintain strong attention to detail.
-                </motion.div>
+                </motion.span>
               )}
             </AnimatePresence>
             <br />
