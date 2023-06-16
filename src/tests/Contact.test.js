@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import Contact from "./Contact";
+import Contact from "../components/Contact";
 
 describe("contact icon section", () => {
   test("renders icons with correct hrefs", () => {

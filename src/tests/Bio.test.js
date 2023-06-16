@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import Bio from "./Bio";
+import Bio from "../components/Bio";
 
 window.scrollTo = jest.fn();
 describe("Bio section", () => {

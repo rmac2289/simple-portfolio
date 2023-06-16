@@ -2,7 +2,6 @@ import { Flex, Box, Text, Heading } from "@chakra-ui/react";
 import React from "react";
 import Bio from "./Bio";
 import Skills from "./Skills";
-import Contact from "./Contact";
 import Projects from "./Projects";
 
 const Header = ({ isSmallScreen }) => {

@@ -59,6 +59,7 @@ const ProjectDrawer = ({ isOpen, onClose, modalName, isSmallScreen }) => {
               {currentProject.tech.map((item, idx) => {
                 return (
                   <Tag
+                    key={idx}
                     bg="white"
                     border="1px solid black"
                     color="gray.800"
@@ -82,6 +83,7 @@ const ProjectDrawer = ({ isOpen, onClose, modalName, isSmallScreen }) => {
                       w={modalName === "Parkfinder" ? "275px" : "175px"}
                       borderRadius={5}
                       mr={1}
+                      alt={modalName}
                     />
                   </Box>
                 );
