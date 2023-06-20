@@ -1,11 +1,19 @@
 import { Flex, Box, Text, Heading } from "@chakra-ui/react";
+import { TriangleDownIcon, TriangleUpIcon } from "@chakra-ui/icons";
 import { useState } from "react";
 import Contact from "./Contact";
 
 const Bio = () => {
   const [showMoreCaret, setShowMoreCaret] = useState(true);
-  const toggleMoreCaret = () => {
-    setShowMoreCaret(false);
+  const [showLessCaret, setShowLessCaret] = useState(false);
+  const toggleMoreCaret = (e) => {
+    console.log(e.target.scrollTop);
+    if (e.target.scrollTop > 50) {
+      setShowMoreCaret(false);
+    }
+    if (e.target.scrollTop > 50 && e.target.scrollTop < 340) {
+      setShowLessCaret(true);
+    }
   };
   return (
     <Box
@@ -14,17 +22,17 @@ const Bio = () => {
       border="1px solid black"
       bg="rgba(255,255,255,.5)"
     >
-      <Flex margin={10} flexDirection="column" justifyContent="flex-start">
+      <Flex
+        margin={10}
+        flexDirection="column"
+        justifyContent="flex-start"
+        position="relative"
+      >
         <Heading mb={2} as="h2" size="2xl" color="gray.800">
           Bio
         </Heading>
         <Box mb={3}>
-          <Text
-            height={380}
-            overflow="scroll"
-            position="relative"
-            onScroll={toggleMoreCaret}
-          >
+          <Text height={380} overflow="scroll" onScroll={toggleMoreCaret}>
             I'm a detail-oriented Software Engineer with a strong background in
             quality assurance and software development dedicated to delivering
             the best possible solutions to end users. I have a proven track
@@ -45,11 +53,6 @@ const Bio = () => {
             members and contribute to minor development work, making significant
             contributions to production releases.
             <br />
-            {showMoreCaret && (
-              <span style={{ position: "absolute", right: 0, bottom: 0 }}>
-                ▼
-              </span>
-            )}
             <br />
             Prior to that, as a Software Development Engineer in Test at Axos
             Bank, I demonstrated my skills in designing and implementing a
@@ -71,6 +74,24 @@ const Bio = () => {
             strong attention to detail.
             <br />
           </Text>
+          {showMoreCaret ? (
+            <span style={{ position: "absolute", right: 0, bottom: 0 }}>
+              <TriangleDownIcon />
+            </span>
+          ) : (
+            <span
+              style={{
+                position: "absolute",
+                right: -10,
+                bottom: -10,
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <TriangleUpIcon />
+              <TriangleDownIcon />
+            </span>
+          )}
         </Box>
         <Contact />
       </Flex>
