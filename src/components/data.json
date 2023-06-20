@@ -13,19 +13,16 @@
       "Postgres",
       "MySQL",
       "SnowFlake",
-      "Frameworks",
-      "Django",
-      "React",
-      "Node.js",
+
       "Ops",
       "AWS",
       "Azure",
       "Jenkins",
-      "GitHub Actions",
+      "Git/GitHub",
       "Monitoring",
       "DataDog",
       "Sentry",
-      "Cloudwatch"
+      "PagerDuty"
     ]
   },
   {

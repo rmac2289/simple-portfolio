@@ -1,18 +1,19 @@
 import { Flex, Box, Text, Heading } from "@chakra-ui/react";
-import { TriangleDownIcon, TriangleUpIcon } from "@chakra-ui/icons";
+import {
+  ArrowDownIcon,
+  TriangleDownIcon,
+  TriangleUpIcon,
+} from "@chakra-ui/icons";
 import { useState } from "react";
 import Contact from "./Contact";
 
 const Bio = () => {
   const [showMoreCaret, setShowMoreCaret] = useState(true);
-  const [showLessCaret, setShowLessCaret] = useState(false);
   const toggleMoreCaret = (e) => {
-    console.log(e.target.scrollTop);
     if (e.target.scrollTop > 50) {
       setShowMoreCaret(false);
-    }
-    if (e.target.scrollTop > 50 && e.target.scrollTop < 340) {
-      setShowLessCaret(true);
+    } else {
+      setShowMoreCaret(true);
     }
   };
   return (
@@ -74,22 +75,17 @@ const Bio = () => {
             strong attention to detail.
             <br />
           </Text>
-          {showMoreCaret ? (
-            <span style={{ position: "absolute", right: 0, bottom: 0 }}>
-              <TriangleDownIcon />
-            </span>
-          ) : (
+          {showMoreCaret && (
             <span
               style={{
                 position: "absolute",
-                right: -10,
-                bottom: -10,
-                display: "flex",
-                flexDirection: "column",
+                right: 10,
+                bottom: 20,
               }}
             >
-              <TriangleUpIcon />
-              <TriangleDownIcon />
+              <ArrowDownIcon />
+              <ArrowDownIcon />
+              <ArrowDownIcon />
             </span>
           )}
         </Box>
