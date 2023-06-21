@@ -22,7 +22,56 @@ const Bio = () => {
       maxWidth="700px"
       border="1px solid black"
       bg="rgba(255,255,255,.5)"
+      position="relative"
     >
+      <div
+        style={{
+          borderLeft: "25px solid transparent",
+          borderRight: "25px solid #871F78",
+          borderTop: "25px solid transparent",
+          borderBottom: "25px solid transparent",
+          position: "absolute",
+          transform: "rotate(45deg)",
+          left: -20,
+          top: -20,
+        }}
+      ></div>
+      <div
+        style={{
+          borderLeft: "25px solid transparent",
+          borderRight: "25px solid #871F78",
+          borderTop: "25px solid transparent",
+          borderBottom: "25px solid transparent",
+          position: "absolute",
+          transform: "rotate(135deg)",
+          top: -20,
+          right: -20,
+        }}
+      ></div>
+      <div
+        style={{
+          borderLeft: "25px solid transparent",
+          borderRight: "25px solid #871F78",
+          borderTop: "25px solid transparent",
+          borderBottom: "25px solid transparent",
+          position: "absolute",
+          transform: "rotate(-45deg)",
+          left: -20,
+          bottom: -20,
+        }}
+      ></div>
+      <div
+        style={{
+          borderLeft: "25px solid transparent",
+          borderRight: "25px solid #871F78",
+          borderTop: "25px solid transparent",
+          borderBottom: "25px solid transparent",
+          position: "absolute",
+          transform: "rotate(-135deg)",
+          right: -20,
+          bottom: -20,
+        }}
+      ></div>
       <Flex
         margin={10}
         flexDirection="column"
