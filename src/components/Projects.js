@@ -10,6 +10,7 @@ import ProjectModal from "./ProjectModal";
 import { GoBrowser } from "react-icons/go";
 import { HiOutlineDevicePhoneMobile } from "react-icons/hi2";
 import { useState } from "react";
+import { Corner } from "./Corner";
 
 const Projects = ({ isSmallScreen }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -29,7 +30,10 @@ const Projects = ({ isSmallScreen }) => {
       maxWidth="700px"
       border="1px solid black"
       bg="rgba(255,255,255,.5)"
+      position="relative"
     >
+      <Corner color="#612429" />
+
       <Flex margin={10} flexDirection="column" justifyContent="flex-start">
         <Heading mb={2} as="h2" size="2xl" color="gray.800">
           Side projects

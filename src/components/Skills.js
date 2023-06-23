@@ -2,6 +2,7 @@ import { Flex, Box, Text, Heading, Tag } from "@chakra-ui/react";
 import data from "./data.json";
 import { isSubcategory } from "../util/helpers";
 import React from "react";
+import { Corner } from "./Corner";
 const Skills = () => {
   return (
     <Box
@@ -9,7 +10,10 @@ const Skills = () => {
       maxWidth="700px"
       border="1px solid black"
       bg="rgba(255,255,255,.5)"
+      position="relative"
     >
+      <Corner color="goldenrod" />
+
       <Flex margin={10} flexDirection="column" justifyContent="flex-start">
         <Heading mb={1} as="h2" size="2xl" color="gray.800">
           Skills

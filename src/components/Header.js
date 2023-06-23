@@ -3,6 +3,7 @@ import React from "react";
 import Bio from "./Bio";
 import Skills from "./Skills";
 import Projects from "./Projects";
+import { Corner } from "./Corner";
 
 const Header = ({ isSmallScreen }) => {
   return (
@@ -12,7 +13,10 @@ const Header = ({ isSmallScreen }) => {
         maxWidth="700px"
         border="1px solid black"
         bg="rgba(255,255,255,.5)"
+        position="relative"
       >
+        <Corner color="black" />
+
         <Flex margin={10} flexDirection="column" justifyContent="flex-start">
           <Heading
             as="h1"

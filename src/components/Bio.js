@@ -6,6 +6,7 @@ import {
 } from "@chakra-ui/icons";
 import { useState } from "react";
 import Contact from "./Contact";
+import { Corner } from "./Corner";
 
 const Bio = () => {
   const [showMoreCaret, setShowMoreCaret] = useState(true);
@@ -24,54 +25,8 @@ const Bio = () => {
       bg="rgba(255,255,255,.5)"
       position="relative"
     >
-      <div
-        style={{
-          borderLeft: "25px solid transparent",
-          borderRight: "25px solid #871F78",
-          borderTop: "25px solid transparent",
-          borderBottom: "25px solid transparent",
-          position: "absolute",
-          transform: "rotate(45deg)",
-          left: -20,
-          top: -20,
-        }}
-      ></div>
-      <div
-        style={{
-          borderLeft: "25px solid transparent",
-          borderRight: "25px solid #871F78",
-          borderTop: "25px solid transparent",
-          borderBottom: "25px solid transparent",
-          position: "absolute",
-          transform: "rotate(135deg)",
-          top: -20,
-          right: -20,
-        }}
-      ></div>
-      <div
-        style={{
-          borderLeft: "25px solid transparent",
-          borderRight: "25px solid #871F78",
-          borderTop: "25px solid transparent",
-          borderBottom: "25px solid transparent",
-          position: "absolute",
-          transform: "rotate(-45deg)",
-          left: -20,
-          bottom: -20,
-        }}
-      ></div>
-      <div
-        style={{
-          borderLeft: "25px solid transparent",
-          borderRight: "25px solid #871F78",
-          borderTop: "25px solid transparent",
-          borderBottom: "25px solid transparent",
-          position: "absolute",
-          transform: "rotate(-135deg)",
-          right: -20,
-          bottom: -20,
-        }}
-      ></div>
+      <Corner color="#3f5913" />
+
       <Flex
         margin={10}
         flexDirection="column"
