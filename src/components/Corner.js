@@ -5,7 +5,7 @@ export const Corner = ({ color }) => {
     <div
       style={{
         borderLeft: "20px solid transparent",
-        borderRight: `20px double ${color}`,
+        borderRight: `20px ridge ${color}`,
         borderTop: "20px solid transparent",
         borderBottom: "20px solid transparent",
         position: "absolute",

@@ -1,4 +1,4 @@
-import { Flex, Box, Text, Heading, Tag } from "@chakra-ui/react";
+import { Flex, Box, Text, Heading, Tag, Image } from "@chakra-ui/react";
 import data from "./data.json";
 import { isSubcategory } from "../util/helpers";
 import React from "react";
@@ -12,7 +12,7 @@ const Skills = () => {
       bg="rgba(255,255,255,.5)"
       position="relative"
     >
-      <Corner color="goldenrod" />
+      <Corner color="purple" />
 
       <Flex margin={10} flexDirection="column" justifyContent="flex-start">
         <Heading mb={1} as="h2" size="2xl" color="gray.800">
@@ -53,6 +53,7 @@ const Skills = () => {
             </Box>
           );
         })}
+        <img src="./aws.png" alt="aws" />
       </Flex>
     </Box>
   );
