@@ -15,7 +15,6 @@ const Header = ({ isSmallScreen }) => {
         bg="rgba(255,255,255,.5)"
         position="relative"
       >
-        <Corner color="purple" />
 
         <Flex margin={10} flexDirection="column" justifyContent="flex-start">
           <Heading

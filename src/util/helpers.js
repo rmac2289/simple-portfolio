@@ -11,6 +11,7 @@ export const isSubcategory = (item) => {
     "Monitoring",
     "Project Management",
     "Soft Skills",
+    "Certifications",
   ];
   return subCategories.includes(item);
 };

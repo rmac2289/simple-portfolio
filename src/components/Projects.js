@@ -32,7 +32,6 @@ const Projects = ({ isSmallScreen }) => {
       bg="rgba(255,255,255,.5)"
       position="relative"
     >
-      <Corner color="#612429" />
 
       <Flex margin={10} flexDirection="column" justifyContent="flex-start">
         <Heading mb={2} as="h2" size="2xl" color="gray.800">

@@ -25,7 +25,6 @@ const Bio = () => {
       bg="rgba(255,255,255,.5)"
       position="relative"
     >
-      <Corner color="#3f5913" />
 
       <Flex
         margin={10}

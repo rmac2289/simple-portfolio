@@ -1,56 +1,55 @@
 [
   {
-    "title": "Technical",
-    "values": [
-      "Languages",
-      "JavaScript",
-      "Python",
-      "HTML",
-      "CSS",
-      "Data",
-      "SQL",
-      "NoSQL",
-      "Postgres",
-      "MySQL",
-      "SnowFlake",
-
-      "Ops",
-      "AWS",
-      "Azure",
-      "Jenkins",
-      "Git/GitHub",
-      "Monitoring",
-      "DataDog",
-      "Sentry",
-      "PagerDuty"
+    "header": "Technical",
+    "subheaders": [
+      {
+        "name": "Languages",
+        "values": ["JavaScript", "Python", "HTML", "CSS"]
+      },
+      {
+        "name": "Data",
+        "values": ["SQL", "NoSQL", "Postgres", "MySQL", "SnowFlake"]
+      },
+      {
+        "name": "Ops",
+        "values" : ["AWS", "Azure", "Jenkins", "Git/GitHub"]
+      },
+      {
+        "name": "Monitoring",
+        "values" : ["DataDog", "Sentry", "PagerDuty"]
+      }
     ]
   },
   {
-    "title": "Testing & QA",
-    "values": [
-      "Test Management",
-      "TestRail",
-      "BrowserStack",
-      "Automation",
-      "Cypress",
-      "Postman",
-      "General",
-      "Mobile Testing",
-      "API Testing",
-      "E2E"
+    "header": "Testing & QA",
+    "subheaders": [
+      
+        {
+          "name": "Test Management",
+          "values": ["TestRail", "BrowserStack", "Automation", "Cypress", "Postman"]
+        },
+        {
+          "name": "General",
+          "values": ["Mobile testing", "API testing", "E2E"]
+        }
+      
     ]
   },
   {
-    "title": "Misc",
-    "values": [
-      "Project Management",
-      "Jira",
-      "Confluence",
-      "Slack",
-      "Soft Skills",
-      "Communication",
-      "Leadership",
-      "Teamwork"
+    "header": "Misc",
+    "subheaders": [
+      {
+        "name": "Certifications",
+        "values": ["AWS Certified Cloud Practitioner"]
+      },
+      {
+        "name": "Project Management",
+        "values": ["Jira", "Confluence", "Slack"]
+      },
+      {
+        "name": "Soft Skills",
+        "values": ["Communication", "Leadership", "Teamwork"]
+      }
     ]
   }
 ]
